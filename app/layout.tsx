@@ -13,10 +13,10 @@ export const metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'Next.js AI Chatbot',
-    template: `%s - Next.js AI Chatbot`
+    default: 'Fullstack Developer Shancw',
+    template: `%s - SHANCW`
   },
-  description: 'An AI-powered chatbot template built with Next.js and Vercel.',
+  description: 'Welcome to my sweet site. sharing knowledge and news',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
@@ -37,7 +37,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <body
         className={cn(
           'font-sans antialiased',
@@ -52,11 +52,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
+          <Header />
+          <div className="gutter mx-auto w-full max-w-screen-lg pt-20">
+            <main>{children}</main>
           </div>
-          <TailwindIndicator />
+          <TailwindIndicator/>
         </Providers>
       </body>
     </html>
