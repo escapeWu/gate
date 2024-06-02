@@ -1,3 +1,4 @@
+
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 
@@ -7,6 +8,9 @@ import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/sonner'
+import Footer from '@/components/footer'
+import { HomeBlur } from '@/components/home-blur'
+
 
 export const metadata = {
   metadataBase: process.env.VERCEL_URL
@@ -45,6 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           GeistMono.variable
         )}
       >
+        <HomeBlur />
         <Toaster position="top-center" />
         <Providers
           attribute="class"
@@ -52,10 +57,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
+          
           <Header />
-          <div className="gutter mx-auto w-full max-w-screen-lg pt-20">
+          <div id="body" className="gutter mx-auto w-full max-w-screen-lg pt-20">
             <main>{children}</main>
           </div>
+          <Footer  />
           <TailwindIndicator/>
         </Providers>
       </body>

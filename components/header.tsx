@@ -28,8 +28,7 @@ async function Nav() {
 
 export function Header() {
     return (
-        <header
-            className="gutter fixed top-0 left-0 z-10 flex h-20 w-full items-center bg-bg-1 border-b border-border-1">
+        <header className="gutter fixed top-0 left-0 z-10 flex h-20 w-full items-center  border-b backdrop-blur-lg">
             <Logo/>
             <Nav/>
         </header>

@@ -1,5 +1,7 @@
 export default async function IndexPage() {
+    // retrieve data from api /api/projects
+
     return (
-        <div>TODO PROJECT PAGE</div>
+        <div>TODO PROJECT   </div>
     )
 }

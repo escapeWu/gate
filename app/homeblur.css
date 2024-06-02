@@ -1,0 +1,29 @@
+.highlight::before,
+.highlight::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 1000ms;
+  width: 100%;
+}
+
+.highlight::before {
+  background: radial-gradient(
+    700px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 182, 193, 0.08),  /* 粉色渐变 */
+    transparent 50%
+  );
+  z-index: 3;
+}
+
+.highlight::after {  
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 182, 193, 0.04),  /* 粉色渐变 */
+    transparent 50%
+  );
+  z-index: 1;
+}
