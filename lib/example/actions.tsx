@@ -1,7 +1,7 @@
 import 'server-only'
 
 
-import {Chat, Message} from '@/lib/types'
+import {Message} from '@/lib/types'
 
 
 export type AIState = {

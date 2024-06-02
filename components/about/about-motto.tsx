@@ -11,7 +11,7 @@ export default function Motto({  className, ...props }: MottoProps) {
     // Create reference to store the DOM element containing the animation
 	const el = useRef(null);
     // Create reference to store the Typed instance itself
-    const typed = useRef(null);
+    const typed = useRef<any>(null);
   
     useEffect(() => {
       const options = {
