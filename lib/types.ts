@@ -1,15 +1,15 @@
-import { CoreMessage } from 'ai'
-
-export type Message = CoreMessage & {
-  id: string
+interface DigtalGardenMetadata {
+  title: string
+  permalink: string
+  created: string
+  updated: string
 }
 
-export interface Example extends Record<string, any> {
-  id: string
+interface Post {
   title: string
-  createdAt: Date
-  userId: string
-  path: string
-  messages: Message[]
-  sharePath?: string
+  content: string
+  link: string
+  created: string
+  updated: string
+  tags: string
 }

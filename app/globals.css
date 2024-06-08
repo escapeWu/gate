@@ -78,3 +78,30 @@
 .gutter {
   @apply px-8
 }
+
+
+.underline-animation {
+  @apply text-white relative inline-block;
+  transition: color 0.3s ease-out;
+}
+.underline-animation::before,
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.underline-animation::after {
+  bottom: 1px; /* 调整这个值以改变下划线与文本之间的距离 */
+  height: 2px; /* 调整下划线的粗细 */
+  background-color: currentColor; /* 使用文本的当前颜色 */
+}
+.underline-animation:hover::before,
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

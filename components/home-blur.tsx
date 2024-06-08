@@ -16,7 +16,6 @@ export function HomeBlur() {
             const rect = container.getBoundingClientRect();
             const mouseX = e.clientX - rect.left;
             const mouseY = e.clientY - rect.top;
-            console.log(mouseX, mouseY)
             
             container.style.setProperty("--mouse-x", `${mouseX}px`);
             container.style.setProperty("--mouse-y", `${mouseY}px`);

@@ -12,16 +12,10 @@ async function Logo() {
 
 async function Nav() {
     return (
-        <nav className={"ml-auto flex items-center gap-2 sm:gap-6"}>
-            <Button className="text-xl font-medium" variant="link" asChild>
-                <Link href="/">Home</Link>
-            </Button>
-            <Button className="text-xl font-medium" variant="link" asChild>
-                <Link href="/projects">Projects</Link>
-            </Button>
-            <Button className="text-xl font-medium" variant="link" asChild>
-                <Link href="/posts">Blogs</Link>
-            </Button>
+        <nav className={"ml-auto flex items-center gap-2 sm:gap-6 text-xl font-medium"}>
+            <Link href="/" className='underline-animation'>Home</Link>
+            <Link href="/projects" className='underline-animation'>Projects</Link>
+            <Link href="/posts" className='underline-animation'>Blogs</Link>
         </nav>
     )
 }

@@ -1,6 +1,7 @@
 import FeatureTagList from '@/components/about/about-feature-list'
 import AboutIntroduce from '@/components/about/about-introduce'
 import AboutMotto from '@/components/about/about-motto'
+import AboutRecentPosts from '@/components/about/about-recent-posts'
 import AboutRecentWork from '@/components/about/about-recent-work'
 export const metadata = {
   title: 'FullStack Web Developer shancw'
@@ -16,7 +17,10 @@ export default async function IndexPage() {
       <div className='mt-24'>
         <AboutRecentWork />
       </div>
-      <div className='mt-12'>
+      <div className='mt-24'>
+        <AboutRecentPosts />
+      </div>
+      <div className='mt-24'>
         <AboutIntroduce />
       </div>
     </div>
