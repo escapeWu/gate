@@ -21,5 +21,5 @@ model post {
   title     String   @db.VarChar(255)
   content   String?  @db.LongText
   link      String   
-  tags      String
+  tags      String?
 }

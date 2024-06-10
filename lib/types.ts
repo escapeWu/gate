@@ -11,5 +11,5 @@ interface Post {
   link: string
   created: string
   updated: string
-  tags: string
+  tags: string | null
 }
