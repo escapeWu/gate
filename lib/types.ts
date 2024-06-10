@@ -7,7 +7,7 @@ interface DigtalGardenMetadata {
 
 interface Post {
   title: string
-  content: string
+  content: string | null
   link: string
   created: string
   updated: string
