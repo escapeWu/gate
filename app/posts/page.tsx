@@ -1,6 +1,6 @@
 import PostItem from "@/components/posts/post-item"
 import { queryPostsByPage } from "./actions"
-
+export const revalidate = 60 // revalidate at most every hour
 export default async function IndexPage() {
     const response = await queryPostsByPage(1, 9999)
     const posts = response.posts
