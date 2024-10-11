@@ -34,8 +34,8 @@ export default function Footer() {
         },
         {
             icon: "/email.png",
-            value: "mailto:shancw1996@gmail.com",
-            name: "shancw1996@gmail.com",
+            value: "mailto:hire@imwsc.com",
+            name: "hire@imwsc.com",
             type: "link",
         }
     ]
