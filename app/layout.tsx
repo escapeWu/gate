@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="zh" suppressHydrationWarning>
       <body
         className={cn(
-          'font-sans antialiased',
+          'font-sans antialiased  text-white',
           GeistSans.variable,
           GeistMono.variable
         )}
