@@ -37,6 +37,12 @@ export default function Footer() {
             value: "mailto:hire@imwsc.com",
             name: "hire@imwsc.com",
             type: "link",
+        },
+        {
+            icon: "",
+            value: "https://beian.miit.gov.cn/",
+            name: "苏ICP备2024139639号-1",
+            type: "link",
         }
     ]
 
@@ -45,11 +51,11 @@ export default function Footer() {
         <div  className="flex flex-row justify-center py-4 border border-t-100 opacity-75 flex-wrap">
             {contactList.map(contact => 
                 <div key={contact.value} className="flex sm:flex-row sm:items-end flex-col items-center  gap-2 mr-4 hover:opacity-100 opacity-75 cursor-pointer mt-2">
-                    <Image src={contact.icon} alt={contact.name} width={25} height={25} />
+                    {contact.icon ? <Image src={contact.icon} alt={contact.name} width={25} height={25} /> : null}
                     <div>
                         {
                             contact.type === "link"? 
-                            <a href={contact.value} >{contact.name}</a> :
+                            <a href={contact.value} target="_blank">{contact.name}</a> :
                             <span>{contact.name}</span>
                         }
                     </div>
