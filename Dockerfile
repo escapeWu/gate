@@ -1,5 +1,5 @@
 # Install dependencies only when needed
-FROM node:18.20.0-alpine AS deps
+FROM docker.imwsc.com/node:18.20.0-alpine AS deps
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
@@ -9,7 +9,7 @@ RUN npx pnpm install
 # This is where because may be the case that you would try
 # to build the app based on some `X_TAG` in my case (Git commit hash)
 # but the code hasn't changed.
-FROM node:18.20.0-alpine AS builder
+FROM docker.imwsc.com/node:18.20.0-alpine AS builder
 
 ENV NODE_ENV=production
 WORKDIR /app
@@ -19,7 +19,7 @@ RUN npx prisma generate
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:18.20.0-alpine AS runner
+FROM docker.imwsc.com/node:18.20.0-alpine AS runner
 
 ARG X_TAG
 WORKDIR /app
