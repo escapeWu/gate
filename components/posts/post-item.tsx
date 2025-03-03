@@ -8,7 +8,7 @@ interface Props {
 
 export default function PostItem({post, ...props}: Props) {
     return <div>
-        <Link href={`https://brain.shancw.net${post.link}`} target="_blank" className="text-2xl cursor-pointer underline-animation hover:text-orange-500">
+        <Link href={`https://brain.imwsc.cn:8443${post.link}`} target="_blank" className="text-2xl cursor-pointer underline-animation hover:text-orange-500">
             {post.title}
         </Link>
         <div className="flex gap-2 my-1 opacity-75">
